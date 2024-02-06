@@ -1,0 +1,37 @@
+package com.self.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import com.self.in.Student;
+import com.self2.in.StudentDao;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class AddStudent1 extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	
+		
+		Student s=new Student();resp.setContentType("text/html");
+		s.setId(Integer.parseInt(req.getParameter("id")));
+		s.setName(req.getParameter("name"));
+		s.setCity(req.getParameter("city"));
+		s.setSalary(Double.parseDouble(req.getParameter("salary")));
+		s.setCollege(req.getParameter("city"));
+
+		StudentDao dao=new StudentDao();
+	      s=dao.add(s);
+	 
+	 PrintWriter out=resp.getWriter();
+	out.write("<h1>comletely<h1>");
+	 
+		
+	}
+	}
+
+

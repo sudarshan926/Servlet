@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/SUDARSHAN/.p2/pool/plugins/org.eclipse.jst.j2ee_1.2.800.v202304260647.jar"/>
+	<classpathentry kind="lib" path="C:/Users/SUDARSHAN/.p2/pool/plugins/org.eclipse.jst.j2ee.web_1.2.300.v202304260449.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

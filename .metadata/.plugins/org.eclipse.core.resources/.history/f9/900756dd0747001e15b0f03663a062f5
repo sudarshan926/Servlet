@@ -1,0 +1,45 @@
+package com.self2.in;
+
+import java.util.List;
+
+import com.self.in.Student;
+
+public class InsertStudent {
+
+	public static void main(String[] args) {
+//		Student s=new Student();
+//		s.setId(20);
+//		s.setName("aamar");
+//		s.setCity("Delhi");
+//		s.setCollege("SRTMU");
+//		s.setSalary(897654);
+//		
+//		StudentDao dao=new StudentDao();
+//	 s=dao.add(s);;
+//		
+//		StudentDao dao=new StudentDao();
+//		Student s=dao.Fetch(14);
+//		 System.out.println("studId :"+s.getId()+" "+"Name :"+s.getName());
+	//<!------All Data Fetch----!>	
+//		StudentDao dao=new StudentDao();
+//		List<Student>list=dao.fetchAll();
+//		for(Student s:list)
+//			System.out.println("ID :"+s.getId()+" "+"Name :"+s.getName()+" "+"City :"+s.getCity()+" "+"College :"+s.getCollege());
+//System.out.println("-----------------");
+
+	
+	
+	
+		//<!------All  Fetch names----!>	
+//	StudentDao dao=new StudentDao();
+//	List<String>list=dao.fetchNAme();
+//	for(String s:list)
+//		System.out.println("Name :"+s);
+		//<!------All  Fetch names and college----!>	
+		StudentDao dao=new StudentDao();
+		List<Student>nameandsalary=dao.fetchNAmeandSalary(50000);
+		for(Student arr:nameandsalary)
+			System.out.println(arr.getSalary()+" "+arr.getName());
+}
+
+}

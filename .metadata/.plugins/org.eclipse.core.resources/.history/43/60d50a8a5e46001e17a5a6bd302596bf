@@ -1,0 +1,23 @@
+package com.fusion.in;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class EmployeeDao {
+
+	public void add(Employee emp) {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("learning-hibernate");
+		EntityManager em=emf.createEntityManager();
+		EntityTransaction tx=em.getTransaction();
+		tx.begin();
+		em.persist(emp);// persist method will generate insert quary
+		
+		tx.commit();
+		emf.close();
+
+	}
+
+	
+}
